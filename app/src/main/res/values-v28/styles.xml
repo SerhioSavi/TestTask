@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DefaultToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:textColorPrimary">@color/greyish_brown</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/BaseTextHeader</item>
+        <item name="elevation">@dimen/action_bar_elevation</item>
+        <item name="android:background">@color/white</item>
+        <item name="actionMenuTextColor">@color/dark_sky_blue</item>
+        <item name="android:actionMenuTextColor">@color/dark_sky_blue</item>
+    </style>
+</resources>

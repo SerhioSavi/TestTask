@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="action_bar_elevation">4dp</dimen>
+    <dimen name="text_header_size">20sp</dimen>
+    <dimen name="text_hint_size">16sp</dimen>
+    <dimen name="text_normal_size">16sp</dimen>
+    <dimen name="main_margin">32sp</dimen>
+    <dimen name="line_height">28sp</dimen>
+    <dimen name="text_normal_line_height">24sp</dimen>
+    <dimen name="margin_top_33dp">33dp</dimen>
+    <dimen name="margin_top_24dp">24dp</dimen>
+</resources>

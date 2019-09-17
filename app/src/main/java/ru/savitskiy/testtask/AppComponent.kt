@@ -1,5 +1,6 @@
 package ru.savitskiy.testtask
 
+import android.content.Context
 import dagger.Component
 import javax.inject.Singleton
 
@@ -9,4 +10,5 @@ import javax.inject.Singleton
 interface AppComponent {
 
     abstract fun getViewModelFactory(): ViewModelFactory
+    abstract fun getContext(): Context
 }
