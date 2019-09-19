@@ -12,6 +12,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
         android:layout_height="match_parent"
         android:background="@color/white"
         tools:context=".LoginActivity">
@@ -34,31 +35,32 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:theme="@style/TextInputLayoutStyle"
             android:id="@+id/textInputLayout"
-            android:layout_marginLeft="@dimen/main_margin"
-            android:layout_marginRight="@dimen/main_margin"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="@dimen/main_margin"
             android:layout_marginTop="@dimen/margin_top_33dp"
+            android:layout_marginRight="@dimen/main_margin"
+            android:animateLayoutChanges="true"
+            android:theme="@style/TextInputLayoutStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:text="@={model.login}"
                 android:layout_height="wrap_content"
-                android:hint="@string/email" />
+                android:hint="@string/email"
+                android:text="@={model.login}" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/passInputLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:layout_marginLeft="@dimen/main_margin"
-            android:layout_marginTop="@dimen/margin_top_24dp"
             android:layout_marginRight="@dimen/main_margin"
+            android:animateLayoutChanges="true"
             android:theme="@style/TextPassInputLayoutStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/pass"
                 android:text="@={model.pass}" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -84,6 +87,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/passInputLayout" />
+
+        <ImageView
+            android:id="@+id/imageViewPassHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/passInputLayout"
+            app:layout_constraintEnd_toEndOf="@+id/passInputLayout"
+            app:layout_constraintTop_toTopOf="@+id/passInputLayout"
+            app:layout_constraintVertical_bias="0.2"
+            app:srcCompat="@drawable/ic_password" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

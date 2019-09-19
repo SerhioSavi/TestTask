@@ -4,11 +4,13 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import ru.savitskiy.testtask.utils.Event
 import ru.savitskiy.testtask.utils.isEmailValid
 import ru.savitskiy.testtask.utils.isPassValid
+import ru.savitskiy.testtask.utils.toCelsius
 import javax.inject.Inject
 
-class LoginViewModel @Inject constructor(): ViewModel() {
+class LoginViewModel @Inject constructor(val weatherRepository: WeatherRepository): ViewModel() {
     var login = MutableLiveData<String>()
     var pass = MutableLiveData<String>()
     var showErrorLogin = Transformations.map(login) {
@@ -28,10 +30,15 @@ class LoginViewModel @Inject constructor(): ViewModel() {
             value = it == null && showErrorLogin.value == null
         }
     }
+    var showSnackBarMessage = MutableLiveData<Event<String>>()
 
-    fun goToAuthZone() {
+    fun requestWeather(lat: Double, lon: Double) {
         if (dataIsOk.value == true) {
-            // go
+            weatherRepository.getWeather(lat.toString(),lon.toString(), {
+                showSnackBarMessage.value = Event("${it?.name} ${it?.mainWeather?.temp?.toCelsius().toString()}")
+            }, {
+
+            })
         }
     }
 

@@ -1,4 +1,4 @@
-package ru.savitskiy.testtask
+package ru.savitskiy.testtask.dagger
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProviders
 import dagger.Binds
 import dagger.MapKey
 import dagger.Module
+import ru.savitskiy.testtask.App
 import javax.inject.Inject
 import javax.inject.Provider
 import kotlin.reflect.KClass

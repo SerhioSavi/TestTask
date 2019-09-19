@@ -1,4 +1,4 @@
-package ru.savitskiy.testtask
+package ru.savitskiy.testtask.dagger
 
 import android.app.Application
 import android.content.Context

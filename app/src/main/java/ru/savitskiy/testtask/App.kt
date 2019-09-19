@@ -2,6 +2,8 @@ package ru.savitskiy.testtask
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
+import ru.savitskiy.testtask.dagger.AppComponent
+import ru.savitskiy.testtask.dagger.ApplicationModule
 
 class App: Application() {
     companion object {

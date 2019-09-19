@@ -4,9 +4,10 @@
     <string name="font_roboto_medium">sans-serif-medium</string>
     <string name="auth_str">Авторизация</string>
     <string name="check_login">Проверьте правильность почты</string>
-    <string name="check_pass">Пароль - минимум 6 символов</string>
+    <string name="check_pass">Не выполнены требования к паролю</string>
     <string name="create">СОЗДАТЬ</string>
     <string name="email">Электронная почта</string>
     <string name="pass">Пароль</string>
     <string name="button_text">Войти</string>
+    <string name="pass_requirements">Минимум 6 символов, должен обязательно содержать минимум 1 строчную букву, 1 заглавную, и 1 цифру</string>
 </resources>
