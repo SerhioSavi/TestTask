@@ -14,11 +14,11 @@ class LoginViewModel @Inject constructor(val weatherRepository: WeatherRepositor
     var login = MutableLiveData<String>()
     var pass = MutableLiveData<String>()
     var showErrorLogin = Transformations.map(login) {
-        if (it.isEmailValid() or it.isEmpty()) null else
+        if (it.isEmailValid()) null else
             App.appComponent.getContext().getString(R.string.check_login)
     }
     var showErrorPass = Transformations.map(pass) {
-        if (it.isPassValid() or it.isEmpty()) null else
+        if (it.isPassValid()) null else
             App.appComponent.getContext().getString(R.string.check_pass)
     }
     var dataIsOk = MediatorLiveData<Boolean>().apply {
