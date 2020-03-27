@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
 import ru.savitskiy.testtask.dagger.AppComponent
 import ru.savitskiy.testtask.dagger.ApplicationModule
+import ru.savitskiy.testtask.dagger.DaggerAppComponent
 
 class App: Application() {
     companion object {
